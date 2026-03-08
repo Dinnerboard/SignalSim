@@ -341,9 +341,9 @@ BOOL SetOutputParam(JsonObject *Object, OUTPUT_PARAM &OutputParam)
 			}
 			break;
 		case 12:	// "sampleFreq"
-			OutputParam.SampleFreq = (int)(GET_DOUBLE_VALUE(Object) * 1000); break;
+			OutputParam.SampleFreq = (int)(GET_DOUBLE_VALUE(Object) * 1000 + 0.5); break;
 		case 13:	// "centerFreq"
-			OutputParam.CenterFreq = (int)(GET_DOUBLE_VALUE(Object) * 1000); break;
+			OutputParam.CenterFreq = (int)(GET_DOUBLE_VALUE(Object) * 1000 + 0.5); break;
 		}
 		Object = JsonStream::GetNextObject(Object);
 	}
